@@ -1,16 +1,16 @@
 #include <SPI.h>
-#include "MCP4131.h"
+#include "MCP4151.h"
 
-MCP4131::MCP4131(int chipSelectPin)
+MCP4151::MCP4151(int chipSelectPin)
 {
 	_chipSelectPin = chipSelectPin;
-	_max = 127;
+	_max = 255;
 	
 	pinMode(_chipSelectPin, OUTPUT);
 	digitalWrite(_chipSelectPin, HIGH);
 }	
 
-void MCP4131::write(int value)
+void MCP4151::write(int value)
 {
 	if (value>_max)
 	{

@@ -6,17 +6,17 @@
 #include "Arduino.h"
 #include <SPI.h>
 
-#ifndef MCP4131_h
-#define MCP4131_h
+#ifndef MCP4151_h
+#define MCP4151_h
 
-class MCP4131
+class MCP4151
 {
 	private:
   int _chipSelectPin;
 int _max;
   
   public:
-		MCP4131(int chipSelectPin);
+		MCP4151(int chipSelectPin);
 		void write(int value);
 };
 #endif
